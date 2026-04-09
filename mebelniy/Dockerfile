@@ -40,8 +40,5 @@ COPY . .
 
 RUN useradd --create-home --shell /bin/bash botuser && \
     chown -R botuser:botuser /app
-
 USER botuser
-
-# Запускаем бота
 CMD ["python", "bot.py"]
