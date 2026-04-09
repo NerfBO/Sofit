@@ -30,9 +30,7 @@ services:
       - DB_HOST=postgres
       - DB_PORT=5432
     volumes:
-      # Монтируем .env файл для удобства изменения настроек
       - ./.env:/app/.env:ro
-      # Монтируем catalog_products.json для сохранения данных
       - ./catalog_products.json:/app/catalog_products.json
     logging:
       driver: "json-file"
